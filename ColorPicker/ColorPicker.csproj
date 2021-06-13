@@ -1,0 +1,48 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>Resources\icon.ico</ApplicationIcon>
+    <Win32Resource></Win32Resource>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\copy.png" />
+    <None Remove="Resources\delete.png" />
+    <None Remove="Resources\dropper.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\copy.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\delete.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\dropper.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ViewModel\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Style\Brushes.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Style\Button.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Style\Window.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+
+</Project>
